@@ -9,6 +9,11 @@ A fast and simple method for multi-planes detection from point clouds using iter
 
 **(Since Open3D 0.16.0, the ransac plane fitting is parallel using openmp. If you use older versions, it can run but the speed would be slow.)**
 
+
+## Reference Dataset
+[Link](https://www.ifi.uzh.ch/en/vmml/research/datasets.html)
+
+
 You can install numpy and open3d by:
 ```
 pip install -r requirements.txt
@@ -31,7 +36,7 @@ python plane_detection2.py
 
 
 # plane_detection.py (RANSAC)
-![Screenshot from 2024-06-13 02-39-02](https://github.com/superdianuj/Multiple_Planes_Detection/assets/47445756/083ed23a-5a88-43db-8f40-a279ce8ca271)
+![Screenshot from 2024-06-13 02-36-06](https://github.com/superdianuj/Multiple_Planes_Detection/assets/47445756/8048138c-c16e-4881-958d-e07de327905c)
 
 
 # plane_detection2.py (RANSAC-Open3D)
