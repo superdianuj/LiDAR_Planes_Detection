@@ -17,8 +17,6 @@ A fast and simple method for multi-planes detection from point clouds using iter
 
 ## Usage
 
-
-
 ```
 
 # change the directory to .ptx files in python files
