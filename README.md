@@ -1,4 +1,4 @@
-![Screenshot from 2024-06-13 02-39-02](https://github.com/superdianuj/Multiple_Planes_Detection/assets/47445756/bba1f6dd-5761-43e2-a44a-6716949e92db)# Multiple Planes Detection
+# Multiple Planes Detection
 
 A fast and simple method for multi-planes detection from point clouds using iterative RANSAC plane fitting.
 
