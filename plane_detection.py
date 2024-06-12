@@ -29,11 +29,45 @@ def DetectMultiPlanes(points, min_ratio=0.05, threshold=0.01, iterations=1000):
     return plane_list
 
 
+def read_ptx_and_save_ply(file_path,out_file_path):
+    with open(file_path,'r') as file:
+        new_columns=int(file.readline().strip())
+        new_rows=int(file.readline().strip())
+        for _ in range(12):
+            file.readline()
+
+        points=[]
+        colors=[]
+
+        for line in file:
+            parts= line.strip().split()
+            if len(parts)==7:
+                x,y,z,intensity,r,g,b=map(float,parts)
+                points.append([x,y,z])
+                colors.append([r/255.0,g/255.0,b/255.0])
+
+    points,colors=np.array(points),np.array(colors)
+    # points,colors=points[:1000],colors[:1000]
+    pcd=o3d.geometry.PointCloud()
+    pcd.points=o3d.utility.Vector3dVector(points)
+    pcd.colors=o3d.utility.Vector3dVector(colors)
+
+
+    o3d.io.write_point_cloud(out_file_path,pcd)
+
+
+#def save_ply(pints,intensities,)
+
 if __name__ == "__main__":
     import random
     import time
 
-    points = ReadPlyPoint('Data/test1.ply')
+    #points,intensities=read_ptx('scan0.ptx')
+    #print(points.shape)
+    #print(intensities.shape)
+    read_ptx_and_save_ply('scan0.ptx','data.ply')
+
+    points = ReadPlyPoint('data.ply')
 
     # pre-processing
     #points = RemoveNan(points)
