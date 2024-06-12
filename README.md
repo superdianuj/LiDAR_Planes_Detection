@@ -14,16 +14,15 @@ A fast and simple method for multi-planes detection from point clouds using iter
 [Link](https://www.ifi.uzh.ch/en/vmml/research/datasets.html)
 
 
-You can install numpy and open3d by:
-```
-pip install -r requirements.txt
-```
 
 ## Usage
-You can copy the functions in `utils.py` and `plane_detection.py` into your Python script and use function `DetectMultiPlanes` directly.
 
-An example code can be found by running:
+
+
 ```
+
+# change the directory to .ptx files in python files
+
 python plane_detection.py
 python plane_detection2.py
 ```
